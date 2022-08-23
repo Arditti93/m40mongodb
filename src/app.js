@@ -10,7 +10,7 @@ const app = async (yargsObject) => {
             //calling our add method to perform to create CRUD operation
             await movie.add(collection)
             //logging our movies collection
-            console.log(movie.list(collection))
+            console.log(await movie.list(collection))
         } else {
             console.log("Incorrect command");
         }
