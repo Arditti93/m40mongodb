@@ -11,14 +11,14 @@ const app = async (yargsObject) => {
             await movie.add(collection)
             //logging our movies collection
             console.log(await movie.list(collection))
-        } else {
-            console.log("Incorrect command");
-        }
-        await client.close();
         //TODO: CREATE STATEMENTS TO HANDLE UPDATE AND DELETE. E.G
         //if (yargsObject.update) {
 
         //}
+        } else {
+            console.log("Incorrect command");
+        }
+        await client.close();
     } catch (error) {
         console.log(error)
         await client.close()
